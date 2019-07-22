@@ -23,9 +23,9 @@ $pdo = new pdo_conn('localhost', 'infinite-scroll', 'jphreak', 'hello');
 $pdo->connect();
 
 /**
- * InfinteScroll Class
+ * InfiniteScroll Class
  */
-class InfinteScroll
+class InfiniteScroll
 {
 
   private $pdo;
@@ -68,7 +68,7 @@ class InfinteScroll
 $qty = isset($_POST['items']) ? $_POST['items'] : 1 ;
 $oset = isset($_POST['oset']) ? $_POST['oset'] : 0 ;
 
-$is = new InfinteScroll($pdo->pdo);
+$is = new InfiniteScroll($pdo->pdo);
 $data = $is->get_items($qty, $oset);
 
 echo json_encode($data);
